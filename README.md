@@ -74,10 +74,18 @@ p2p-peer-address = 35.231.136.15:9878
 p2p-peer-address = 52.68.135.18:10000
 p2p-peer-address = 104.155.193.66:9876
 p2p-peer-address = p2p.kylin-testnet.eospace.io:88
+p2p-peer-address = kylin.fnp2p.eosbixin.com:1080
+```
+
+## BNET LIST
+
+```
+bnet-connect = kylin.fnbnet.eosbixin.com:1081
 ```
 
 ## HTTP API LIST
 
 ```
 http://api.kylin-testnet.eospace.io/v1/chain/get_info
+http://kylin.fn.eosbixin.com/v1/chain/get_info
 ```
