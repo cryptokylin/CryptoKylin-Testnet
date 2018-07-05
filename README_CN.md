@@ -1,64 +1,64 @@
 # CryptoKylin-Testnet
 
-Welcome to the CryptoKylin-Testnet
+欢迎来到 CryptoKylin-Testnet
 
-[点击查看中文](README_CN.md)
+[View in English](README.md)
 
-## Dependencies
+## 依赖
 
-- [Docker](https://docs.docker.com) Docker 17.05 or higher is required
-- [docker-compose](https://docs.docker.com/compose/) version >= 1.10.0
+- [Docker](https://docs.docker.com) Docker版本 >= 17.05
+- [docker-compose](https://docs.docker.com/compose/) 版本 >= 1.10.0
 
-## Clone project
+## 克隆项目
 
 ```
 git clone git@github.com:cryptokylin/CryptoKylin-Testnet.git
 cd fullnode
 ```
 
-## Setup a fullnode in 5 seconds using the shell
+## 5秒之内搭建一个全节点
 
 ```
 ./run.sh
 ```
 
-## Setup a fullnode manually in 1 minute
+## 1分钟内手动搭建全节点
 
-The first step, create the desired directory:
+第一步，创建所需要的目录:
 
 ```
 mkdir -p /data/eos/nodeos-data-volume/nodeos-data-kylin
 mkdir -p /data/eos/nodeos-data-volume/nodeos-data-kylin
 ```
 
-The second step is to prepare the configuration file:
+第二步，准备配置文件:
 
 ```
 cp -r config.ini /data/eos/nodeos-data-volume/nodeos-data-kylin
 cp -r genesis.json /data/eos/nodeos-data-volume/nodeos-data-kylin
 ```
 
-The third step, join the network:
+第三步，启动全节点
 
 ```
 docker-compose -f docker-compose-kylin-init.yml up -d
 ```
 
-## Stop/Restart syncing
+## 暂停/重启 同步
 
-To stop:
+暂停:
 
 ```
 docker-compose -f docker-compose-kylin.yml down
 ```
 
-To restart:
+重启:
 
 ```
 docker-compose -f docker-compose-kylin.yml down
 docker-compose -f docker-compose-kylin.yml up -d
 ```
-## Chain info
+## 链信息
 
 ```
 {
@@ -66,7 +66,7 @@ docker-compose -f docker-compose-kylin.yml up -d
 }
 ```
 
-## P2P LIST
+## P2P 节点列表
 
 ```
 p2p-peer-address = 13.125.53.113:9876
