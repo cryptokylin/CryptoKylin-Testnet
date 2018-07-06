@@ -88,4 +88,5 @@ bnet-connect = kylin.fnbnet.eosbixin.com:1081
 ```
 http://api.kylin-testnet.eospace.io/v1/chain/get_info
 http://kylin.fn.eosbixin.com/v1/chain/get_info
+http://13.125.53.113:8888/v1/chain/get_info
 ```
