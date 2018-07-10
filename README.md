@@ -90,3 +90,10 @@ http://api.kylin-testnet.eospace.io/v1/chain/get_info
 http://kylin.fn.eosbixin.com/v1/chain/get_info
 http://13.125.53.113:8888/v1/chain/get_info
 ```
+
+### Faucet
+you can get 100 token each call.  
+each account can be called once within 5 minutes.  
+``` 
+curl http://13.125.53.113/get_token?<account-name>
+```
