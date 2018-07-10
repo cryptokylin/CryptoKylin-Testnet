@@ -71,7 +71,7 @@ docker-compose -f docker-compose-kylin.yml up -d
 ```
 p2p-peer-address = 13.125.53.113:9876
 p2p-peer-address = 35.231.136.15:9878
-p2p-peer-address = kylin.eoseco.com:10000
+p2p-peer-address = p2p.kylin.eoseco.com:10000
 p2p-peer-address = 104.155.193.66:9876
 p2p-peer-address = p2p.kylin-testnet.eospace.io:88
 p2p-peer-address = kylin.fnp2p.eosbixin.com:1080
