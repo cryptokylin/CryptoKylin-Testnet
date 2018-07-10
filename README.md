@@ -75,6 +75,7 @@ p2p-peer-address = 52.68.135.18:10000
 p2p-peer-address = 104.155.193.66:9876
 p2p-peer-address = p2p.kylin-testnet.eospace.io:88
 p2p-peer-address = kylin.fnp2p.eosbixin.com:1080
+p2p-peer-address = peering-kylin.eosasia.one:80
 ```
 
 ## BNET LIST
@@ -89,6 +90,8 @@ bnet-connect = kylin.fnbnet.eosbixin.com:1081
 http://api.kylin-testnet.eospace.io/v1/chain/get_info
 http://kylin.fn.eosbixin.com/v1/chain/get_info
 http://13.125.53.113:8888/v1/chain/get_info
+http://api-kylin.eosasia.one
+https://api-kylin.eosasia.one
 ```
 
 ### Faucet
