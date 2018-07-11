@@ -96,8 +96,7 @@ http://api.kylin.eoseco.com/v1/chain/get_info
 ```
 
 ### Faucet
-you can get 100 token each call.  
-each account can be called once within 5 minutes.  
+you can get 100 tokens each call and max 1000 tokens per day. 
 ``` 
-curl http://13.125.53.113/get_token?<account-name>
+curl http://13.125.53.113/get_token?<your-account-name>
 ```
