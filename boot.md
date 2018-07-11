@@ -30,7 +30,7 @@ cleos set contract eosio.msig ${CONTRACTS_FOLDER}/eosio.msig -p eosio.msig
 
 # step 7: create and issue token
 cleos push action eosio.token create '["eosio", "10000000000.0000 EOS"]' -p eosio.token
-cleos push action eosio.token issue '["eosio",  "1000000000.0000 EOS", "kylin-issue"]' -p eosio
+cleos push action eosio.token issue '["eosio",  "1000000000.0000 EOS", "cryptokylin"]' -p eosio
 
 # step 8: set contract eosio.system
 cleos set contract eosio ${CONTRACTS_FOLDER}/eosio.system -x 1000 -p eosio
@@ -60,7 +60,7 @@ cleos  transfer  eosio  eoshuobipool  "100000000.0000 EOS"
 
 # step 11: transfer all eosio balance to faucet account and activate the network
 cleos  transfer  eosio  eosfaucet111  "100000000.0000 EOS"
-cleos  transfer  eosio  eosio.faucet  "200000000.0000 EOS"
+cleos  transfer  eosio  eosio.faucet  "199999730.0000 EOS"
 
 
 # step last: resign all system account
@@ -81,11 +81,3 @@ cleos push action eosio updateauth '{"account": "eosio", "permission": "active",
 cleos push action eosio updateauth '{"account": "eosio", "permission": "owner", "parent": "",       "auth":{"threshold": 1, "keys": [], "waits": [], "accounts": [{"weight": 1, "permission": {"actor": "eosio.prods", "permission": active}}]}}' -p eosio@owner
 
 ```
-
-
-
-
-
-
-
-
