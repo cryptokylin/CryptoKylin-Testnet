@@ -62,6 +62,9 @@ cleos  transfer  eosio  eoshuobipool  "100000000.0000 EOS"
 cleos  transfer  eosio  eosfaucet111  "100000000.0000 EOS"
 cleos  transfer  eosio  eosio.faucet  "199999730.0000 EOS"
 
+## check eosio balance
+cleos get currency balance eosio.token eosio
+
 
 # step last: resign all system account
 for account in eosio.bpay eosio.msig eosio.names eosio.ram eosio.ramfee eosio.saving eosio.stake eosio.token eosio.vpay
@@ -71,7 +74,7 @@ do
   sleep 1;
 done
 
-## check
+## check system accounts
 for account in eosio.bpay eosio.msig eosio.names eosio.ram eosio.ramfee eosio.saving eosio.stake eosio.token eosio.vpay
 do
   echo --- ${account} --- && cleos get account ${account} && sleep 1;
@@ -80,4 +83,6 @@ done
 cleos push action eosio updateauth '{"account": "eosio", "permission": "active", "parent": "owner", "auth":{"threshold": 1, "keys": [], "waits": [], "accounts": [{"weight": 1, "permission": {"actor": "eosio.prods", "permission": active}}]}}' -p eosio@active
 cleos push action eosio updateauth '{"account": "eosio", "permission": "owner", "parent": "",       "auth":{"threshold": 1, "keys": [], "waits": [], "accounts": [{"weight": 1, "permission": {"actor": "eosio.prods", "permission": active}}]}}' -p eosio@owner
 
+## check eosio
+cleos get account eosio
 ```
