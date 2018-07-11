@@ -16,10 +16,7 @@ cleos wallet import <eosio-private-key>
 CONTRACTS_FOLDER='/opt/EOS-Mainnet/eos/build/contracts'
 cleos set contract eosio ${CONTRACTS_FOLDER}/eosio.bios -p eosio
 
-# step 5: set producers
-cleos push action eosio setprods '{"schedule":[{"producer_name":"eosio","block_signing_key":"'EOS7hHHDtnPRbhMmfHJHUEKQyiutKrt9wZPdy1JbaATVLyxpCkrop'"}]}' -p eosio
-
-# step 6: create system accounts
+# step 5: create system accounts
 for account in eosio.bpay eosio.msig eosio.names eosio.ram eosio.ramfee eosio.saving eosio.stake eosio.token eosio.vpay
 do
   echo -e "\n creating $account \n";
@@ -27,18 +24,18 @@ do
   sleep 1;
 done
 
-# step 7: set contract
+# step 6: set contract
 cleos set contract eosio.token ${CONTRACTS_FOLDER}/eosio.token -p eosio.token
 cleos set contract eosio.msig ${CONTRACTS_FOLDER}/eosio.msig -p eosio.msig
 
-# step 8: create and issue token
+# step 7: create and issue token
 cleos push action eosio.token create '["eosio", "10000000000.0000 EOS"]' -p eosio.token
 cleos push action eosio.token issue '["eosio",  "1000000000.0000 EOS", "kylin-issue"]' -p eosio
 
-# step 9: set contract eosio.system
+# step 8: set contract eosio.system
 cleos set contract eosio ${CONTRACTS_FOLDER}/eosio.system -x 1000 -p eosio
 
-# step 10: create some account
+# step 9: create some account
 cleos system newaccount --stake-net "10.0000 EOS" --stake-cpu "10.0000 EOS" --buy-ram "10.0000 EOS"  eosio eosecoeoseco EOS73Th1ph7AHJz93zEmbmqNnkVkNqSuy9e3sGQRaLwxUEHJQdmB3 EOS73Th1ph7AHJz93zEmbmqNnkVkNqSuy9e3sGQRaLwxUEHJQdmB3
 cleos system newaccount --stake-net "10.0000 EOS" --stake-cpu "10.0000 EOS" --buy-ram "10.0000 EOS"  eosio eosbixincool EOS89A2Zktdyb3iij4aejoWLwhHjWuZjsVBGqNCwybEcfV2F2pYpR EOS6eMWsyR9ZcrT9rpRd5dzkyWnNKzs3SxzvjjkaedREwcVf1dBbx
 cleos system newaccount --stake-net "10.0000 EOS" --stake-cpu "10.0000 EOS" --buy-ram "10.0000 EOS"  eosio eospaceioeos EOS8LjRfkatmLxKdJiBXjyFAnFqws1gkjoWDv7xwf87WfGpBs7Z8Y EOS6vxCWyx3ryiFosCTQ6eWDdcEPvp6ebBi5CWnbz4y4ifR6GcMft
@@ -47,23 +44,24 @@ cleos system newaccount --stake-net "10.0000 EOS" --stake-cpu "10.0000 EOS" --bu
 cleos system newaccount --stake-net "10.0000 EOS" --stake-cpu "10.0000 EOS" --buy-ram "10.0000 EOS"  eosio eoslaomaocom EOS8hNCsEiEQzYiZY8uVxJiWGqD38VoDUNuVfS648spsftAJA87Z1 EOS8hNCsEiEQzYiZY8uVxJiWGqD38VoDUNuVfS648spsftAJA87Z1
 cleos system newaccount --stake-net "10.0000 EOS" --stake-cpu "10.0000 EOS" --buy-ram "10.0000 EOS"  eosio eoshuobipool EOS4xfwXh5DmXWdCJv3HFm7cnCYUGabE3itoabZBYwedNDKwA2YQU EOS4vRtWyVQezZG5tjXYNJigaaxx17ym5vR21cBG2mAuKJWBGHU1S
 
-# --  user for faucet -- 
+# --  faucet accounts -- 
 cleos system newaccount --stake-net "10.0000 EOS" --stake-cpu "10.0000 EOS" --buy-ram "10.0000 EOS"  eosio eosfaucet111 EOS8CjwFmPtGzhZEST7NTSNfoAULHTVHfrBdVJQxeSD2b3XMFHbZs EOS8TRdivFvDSVZcVPHoyMPrSmn2BajKZYoAt9af37RcWDGkntz1c
 cleos system newaccount --stake-net "10.0000 EOS" --stake-cpu "10.0000 EOS" --buy-ram "10.0000 EOS"  eosio eosio.faucet EOS6ZdSYBZtvZ9E3KKBbgMo75Tj787H6Cn5F5QvEGZ9A7GJzFkK6n EOS6fqxxdiuvRR8y6LdfAjKoPLVuVuHHz2wHoTqB3mVBhQQqgonef
 
-# step 11: transfer
-cleos  transfer  eosio  eosecoeoseco  "30000000.0000 EOS"
-cleos  transfer  eosio  eosbixincool  "30000000.0000 EOS"
-cleos  transfer  eosio  eospaceioeos  "30000000.0000 EOS"
-cleos  transfer  eosio  eosasia11111  "30000000.0000 EOS"
-cleos  transfer  eosio  eosstorebest  "30000000.0000 EOS"
-cleos  transfer  eosio  eoslaomaocom  "30000000.0000 EOS"
-cleos  transfer  eosio  eoshuobipool  "30000000.0000 EOS"
+# step 10: transfer
+cleos  transfer  eosio  eosecoeoseco  "100000000.0000 EOS"
+cleos  transfer  eosio  eosbixincool  "100000000.0000 EOS"
+cleos  transfer  eosio  eospaceioeos  "100000000.0000 EOS"
+cleos  transfer  eosio  eosasia11111  "100000000.0000 EOS"
+cleos  transfer  eosio  eosstorebest  "100000000.0000 EOS"
+cleos  transfer  eosio  eoslaomaocom  "100000000.0000 EOS"
+cleos  transfer  eosio  eoshuobipool  "100000000.0000 EOS"
 
 
-# step 12:
-1. transfer all eosio balance to faucet account
-2. activate the network
+# step 11: transfer all eosio balance to faucet account and activate the network
+cleos  transfer  eosio  eosfaucet111  "100000000.0000 EOS"
+cleos  transfer  eosio  eosio.faucet  "200000000.0000 EOS"
+
 
 # step last: resign all system account
 for account in eosio.bpay eosio.msig eosio.names eosio.ram eosio.ramfee eosio.saving eosio.stake eosio.token eosio.vpay
@@ -73,17 +71,14 @@ do
   sleep 1;
 done
 
-
+## check
 for account in eosio.bpay eosio.msig eosio.names eosio.ram eosio.ramfee eosio.saving eosio.stake eosio.token eosio.vpay
 do
-  echo --- ${account} ---
-  cleos get account ${account}
-  sleep 1;
+  echo --- ${account} --- && cleos get account ${account} && sleep 1;
 done
 
 cleos push action eosio updateauth '{"account": "eosio", "permission": "active", "parent": "owner", "auth":{"threshold": 1, "keys": [], "waits": [], "accounts": [{"weight": 1, "permission": {"actor": "eosio.prods", "permission": active}}]}}' -p eosio@active
 cleos push action eosio updateauth '{"account": "eosio", "permission": "owner", "parent": "",       "auth":{"threshold": 1, "keys": [], "waits": [], "accounts": [{"weight": 1, "permission": {"actor": "eosio.prods", "permission": active}}]}}' -p eosio@owner
-
 
 ```
 
