@@ -95,3 +95,9 @@ http://api-kylin.eosasia.one
 https://api-kylin.eosasia.one
 http://api.kylin.eoseco.com/v1/chain/get_info
 ```
+
+### 水龙头
+每次调用可以获得100个token，每个ip每天最多可以获得1000个token。
+``` 
+curl http://13.125.53.113/get_token?<your-account-name>
+```
