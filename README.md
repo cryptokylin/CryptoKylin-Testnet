@@ -88,7 +88,7 @@ bnet-connect = kylin.fnbnet.eosbixin.com:1081
 ## HTTP API LIST
 
 ```
-http://api.kylin-testnet.eospace.io/v1/chain/get_info
+https://api.kylin-testnet.eospace.io/v1/chain/get_info
 http://kylin.fn.eosbixin.com/v1/chain/get_info
 https://api-kylin.eosasia.one/v1/chain/get_info
 https://api-kylin.eoslaomao.com/v1/chain/get_info
