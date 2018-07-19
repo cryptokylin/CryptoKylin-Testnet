@@ -27,8 +27,7 @@ cd fullnode
 第一步，创建所需要的目录:
 
 ```
-mkdir -p /data/eos/nodeos-data-volume/nodeos-data-kylin
-mkdir -p /data/eos/nodeos-data-volume/nodeos-data-kylin
+mkdir -p /data/eos/nodeos-data-volume/nodeos-data-kylin/data
 ```
 
 第二步，准备配置文件:

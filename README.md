@@ -27,8 +27,7 @@ cd fullnode
 The first step, create the desired directory:
 
 ```
-mkdir -p /data/eos/nodeos-data-volume/nodeos-data-kylin
-mkdir -p /data/eos/nodeos-data-volume/nodeos-data-kylin
+mkdir -p /data/eos/nodeos-data-volume/nodeos-data-kylin/data
 ```
 
 The second step is to prepare the configuration file:
