@@ -34,14 +34,13 @@ mkdir -p /data/eos/nodeos-data-volume/nodeos-data-kylin
 第二步，准备配置文件:
 
 ```
-cp -r config.ini /data/eos/nodeos-data-volume/nodeos-data-kylin
-cp -r genesis.json /data/eos/nodeos-data-volume/nodeos-data-kylin
+cp -r config /data/eos/nodeos-data-volume/nodeos-data-kylin
 ```
 
 第三步，启动全节点
 
 ```
-docker-compose -f docker-compose-kylin-init.yml up -d
+docker-compose -f docker-compose-kylin-init.yaml up -d
 ```
 
 ## 暂停/重启 同步
@@ -49,14 +48,14 @@ docker-compose -f docker-compose-kylin-init.yml up -d
 暂停:
 
 ```
-docker-compose -f docker-compose-kylin.yml down
+docker-compose -f docker-compose-kylin.yaml down
 ```
 
 重启:
 
 ```
-docker-compose -f docker-compose-kylin.yml down
-docker-compose -f docker-compose-kylin.yml up -d
+docker-compose -f docker-compose-kylin.yaml down
+docker-compose -f docker-compose-kylin.yaml up -d
 ```
 ## 链信息
 

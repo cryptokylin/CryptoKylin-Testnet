@@ -34,14 +34,13 @@ mkdir -p /data/eos/nodeos-data-volume/nodeos-data-kylin
 The second step is to prepare the configuration file:
 
 ```
-cp -r config.ini /data/eos/nodeos-data-volume/nodeos-data-kylin
-cp -r genesis.json /data/eos/nodeos-data-volume/nodeos-data-kylin
+cp -r config /data/eos/nodeos-data-volume/nodeos-data-kylin
 ```
 
 The third step, join the network:
 
 ```
-docker-compose -f docker-compose-kylin-init.yml up -d
+docker-compose -f docker-compose-kylin-init.yaml up -d
 ```
 
 ## Stop/Restart syncing
@@ -49,14 +48,14 @@ docker-compose -f docker-compose-kylin-init.yml up -d
 To stop:
 
 ```
-docker-compose -f docker-compose-kylin.yml down
+docker-compose -f docker-compose-kylin.yaml down
 ```
 
 To restart:
 
 ```
-docker-compose -f docker-compose-kylin.yml down
-docker-compose -f docker-compose-kylin.yml up -d
+docker-compose -f docker-compose-kylin.yaml down
+docker-compose -f docker-compose-kylin.yaml up -d
 ```
 ## Chain info
 
