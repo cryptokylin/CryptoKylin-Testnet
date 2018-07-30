@@ -99,7 +99,23 @@ http://kylin.meet.one:8888/v1/chain/get_info
 ```
 
 ### Faucet
-you can get 100 tokens each call and max 1000 tokens per day. 
+
+Creating accounts on cryptokylin is pretty simple:
+
+#### Free Account
+Create account using: http://faucet.cryptokylin.io/create_account?new_account_name
+
+Example:
+```
+curl http://faucet.cryptokylin.io/create_account\?111111111ooo
+```
+
+#### Get Free tokens
+Get free token with: http://faucet.cryptokylin.io/get_token?your_account_name. 
+
+You can get 100 tokens each call and max 1000 tokens per day.
+
+Example:
 ``` 
-curl http://13.125.53.113/get_token?<your-account-name>
+curl http://faucet.cryptokylin.io/get_token?111111111ooo
 ```

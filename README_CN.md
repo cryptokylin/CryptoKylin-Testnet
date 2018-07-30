@@ -99,7 +99,22 @@ http://kylin.meet.one:8888/v1/chain/get_info
 ```
 
 ### 水龙头
-每次调用可以获得100个token，每个ip每天最多可以获得1000个token。
+
+在 `cryptokylin` 上创建账号非常简单:
+
+#### 免费账号
+创建免费账号: http://faucet.cryptokylin.io/create_account?new_account_name
+
+例子:
+```
+curl http://faucet.cryptokylin.io/create_account\?111111111ooo
+```
+
+#### 获得免费Token
+获得免费Token: http://faucet.cryptokylin.io/get_token?your_account_name. 
+每一次调用能获得100EOS, 每天最多获得1000个EOS.
+
+例子:
 ``` 
-curl http://13.125.53.113/get_token?<your-account-name>
+curl http://faucet.cryptokylin.io/get_token?111111111ooo
 ```
