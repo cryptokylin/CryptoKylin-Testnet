@@ -32,10 +32,13 @@ cleos set contract eosio.msig ${CONTRACTS_FOLDER}/eosio.msig -p eosio.msig
 cleos push action eosio.token create '["eosio", "10000000000.0000 EOS"]' -p eosio.token
 cleos push action eosio.token issue '["eosio",  "1000000000.0000 EOS", "cryptokylin"]' -p eosio
 
-# step 8: set contract eosio.system
+# setp 8: setting privileged account for eosio.msig
+cleos push action eosio setpriv '{"account": "eosio.msig", "is_priv": 1}' -p eosio
+
+# step 9: set contract eosio.system
 cleos set contract eosio ${CONTRACTS_FOLDER}/eosio.system -x 1000 -p eosio
 
-# step 9: create some account
+# step 10: create some account
 cleos system newaccount --stake-net "10.0000 EOS" --stake-cpu "10.0000 EOS" --buy-ram "10.0000 EOS"  eosio eosecoeoseco EOS73Th1ph7AHJz93zEmbmqNnkVkNqSuy9e3sGQRaLwxUEHJQdmB3 EOS73Th1ph7AHJz93zEmbmqNnkVkNqSuy9e3sGQRaLwxUEHJQdmB3
 cleos system newaccount --stake-net "10.0000 EOS" --stake-cpu "10.0000 EOS" --buy-ram "10.0000 EOS"  eosio eosbixincool EOS89A2Zktdyb3iij4aejoWLwhHjWuZjsVBGqNCwybEcfV2F2pYpR EOS6eMWsyR9ZcrT9rpRd5dzkyWnNKzs3SxzvjjkaedREwcVf1dBbx
 cleos system newaccount --stake-net "10.0000 EOS" --stake-cpu "10.0000 EOS" --buy-ram "10.0000 EOS"  eosio eospaceioeos EOS8LjRfkatmLxKdJiBXjyFAnFqws1gkjoWDv7xwf87WfGpBs7Z8Y EOS6vxCWyx3ryiFosCTQ6eWDdcEPvp6ebBi5CWnbz4y4ifR6GcMft
@@ -48,7 +51,7 @@ cleos system newaccount --stake-net "10.0000 EOS" --stake-cpu "10.0000 EOS" --bu
 cleos system newaccount --stake-net "10.0000 EOS" --stake-cpu "10.0000 EOS" --buy-ram "10.0000 EOS"  eosio eosfaucet111 EOS8CjwFmPtGzhZEST7NTSNfoAULHTVHfrBdVJQxeSD2b3XMFHbZs EOS8TRdivFvDSVZcVPHoyMPrSmn2BajKZYoAt9af37RcWDGkntz1c
 cleos system newaccount --stake-net "10.0000 EOS" --stake-cpu "10.0000 EOS" --buy-ram "10.0000 EOS"  eosio eosio.faucet EOS6ZdSYBZtvZ9E3KKBbgMo75Tj787H6Cn5F5QvEGZ9A7GJzFkK6n EOS6fqxxdiuvRR8y6LdfAjKoPLVuVuHHz2wHoTqB3mVBhQQqgonef
 
-# step 10: transfer
+# step 11: transfer
 cleos  transfer  eosio  eosecoeoseco  "100000000.0000 EOS"
 cleos  transfer  eosio  eosbixincool  "100000000.0000 EOS"
 cleos  transfer  eosio  eospaceioeos  "100000000.0000 EOS"
@@ -58,7 +61,7 @@ cleos  transfer  eosio  eoslaomaocom  "100000000.0000 EOS"
 cleos  transfer  eosio  eoshuobipool  "100000000.0000 EOS"
 
 
-# step 11: transfer all eosio balance to faucet account and activate the network
+# step 12: transfer all eosio balance to faucet account and activate the network
 cleos  transfer  eosio  eosfaucet111  "100000000.0000 EOS"
 cleos  transfer  eosio  eosio.faucet  "199999730.0000 EOS"
 
