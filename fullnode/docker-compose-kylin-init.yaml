@@ -2,7 +2,7 @@ version: "3"
 
 services:
   nodeosd:
-    image: noprom/eosmainnet:v1.1.1
+    image: noprom/eosmainnet:v1.1.3
     command: /opt/eosio/bin/nodeos --data-dir=/data --genesis-json=/etc/nodeos/genesis.json --config-dir=/etc/nodeos --delete-all-blocks
     hostname: nodeosd
     ports:
