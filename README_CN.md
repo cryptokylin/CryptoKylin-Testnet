@@ -72,7 +72,7 @@ p2p-peer-address = 119.254.15.40:9876
 p2p-peer-address = p2p.kylin.eoseco.com:10000
 p2p-peer-address = p2p-kylin.eoslaomao.com:443
 p2p-peer-address = p2p.kylin-testnet.eospace.io:88
-p2p-peer-address = kylin.fnp2p.eosbixin.com:1080
+p2p-peer-address = kylin.fnp2p.eosbixin.com:443
 p2p-peer-address = peering-kylin.eosasia.one:80
 p2p-peer-address = kylin.meet.one:9876
 ```
@@ -80,7 +80,7 @@ p2p-peer-address = kylin.meet.one:9876
 ## BNET 节点列表
 
 ```
-bnet-connect = kylin.fnbnet.eosbixin.com:1081
+bnet-connect = kylin.fnbnet.eosbixin.com:3389
 bnet-connect = kylin.meet.one:4321
 ```
 
