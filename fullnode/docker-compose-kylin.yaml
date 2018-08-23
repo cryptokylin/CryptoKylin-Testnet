@@ -2,7 +2,7 @@ version: "3"
 
 services:
   nodeosd:
-    image: noprom/eosmainnet:v1.1.6
+    image: crytokylin/eosmainnet:1.2.2
     command: /opt/eosio/bin/nodeos --data-dir=/data --config-dir=/etc/nodeos
     hostname: nodeosd
     ports:
