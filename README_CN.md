@@ -77,6 +77,7 @@ p2p-peer-address = peering-kylin.eosasia.one:80
 p2p-peer-address = kylin.meet.one:9876
 p2p-peer-address = peer.kylin.alohaeos.com:9876
 p2p-peer-address = p2p.kylin.helloeos.com.cn:9876
+p2p-peer-address = kylin-testnet.starteos.io:9876
 ```
 
 ## BNET 节点列表
@@ -99,6 +100,7 @@ http://119.254.15.40:8888/v1/chain/get_info
 http://kylin.meet.one:8888/v1/chain/get_info
 https://api.kylin.alohaeos.com/v1/chain/get_info
 http://api.kylin.helloeos.com.cn/v1/chain/get_info
+http://api.kylin.starteos.io/v1/chain/get_info
 ```
 
 ### 水龙头
