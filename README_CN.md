@@ -79,6 +79,7 @@ p2p-peer-address = peer.kylin.alohaeos.com:9876
 p2p-peer-address = p2p.kylin.helloeos.com.cn:9876
 p2p-peer-address = kylin-testnet.starteos.io:9876
 p2p-peer-address = kylin-fn001.eossv.org:443
+p2p-peer-address = p2p.kylin.eosbeijing.one:8080
 ```
 
 ## BNET 节点列表
@@ -103,6 +104,7 @@ https://api.kylin.alohaeos.com/v1/chain/get_info
 http://api.kylin.helloeos.com.cn/v1/chain/get_info
 http://api.kylin.starteos.io/v1/chain/get_info
 http://kylin-fn001.eossv.org/v1/chain/get_info
+http://api.kylin.eosbeijing.one:8000/v1/chain/get_info
 ```
 
 ### 水龙头
@@ -118,10 +120,10 @@ curl http://faucet.cryptokylin.io/create_account\?111111111ooo
 ```
 
 #### 获得免费Token
-获得免费Token: http://faucet.cryptokylin.io/get_token?your_account_name. 
+获得免费Token: http://faucet.cryptokylin.io/get_token?your_account_name.
 每一次调用能获得100EOS, 每天最多获得1000个EOS.
 
 例子:
-``` 
+```
 curl http://faucet.cryptokylin.io/get_token?111111111ooo
 ```
