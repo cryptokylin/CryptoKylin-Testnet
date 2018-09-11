@@ -81,6 +81,7 @@ p2p-peer-address = kylin-testnet.starteos.io:9876
 p2p-peer-address = kylin-fn001.eossv.org:443
 p2p-peer-address = kylin-fn001.eossv.org:443
 p2p-peer-address = api-kylin.eoshenzhen.io:9876
+p2p-peer-address = p2p.kylin.eosbeijing.one:8080
 ```
 
 ## BNET LIST
@@ -106,6 +107,7 @@ http://api.kylin.helloeos.com.cn/v1/chain/get_info
 http://api-kylin.starteos.io/v1/chain/get_info
 http://kylin-fn001.eossv.org/v1/chain/get_info
 http://api-kylin.eoshenzhen.io:8890/v1/chain/get_info
+http://api.kylin.eosbeijing.one:8000/v1/chain/get_info
 ```
 
 ### Faucet
@@ -121,11 +123,11 @@ curl http://faucet.cryptokylin.io/create_account\?111111111ooo
 ```
 
 #### Get Free tokens
-Get free token with: http://faucet.cryptokylin.io/get_token?your_account_name. 
+Get free token with: http://faucet.cryptokylin.io/get_token?your_account_name.
 
 You can get 100 tokens each call and max 1000 tokens per day.
 
 Example:
-``` 
+```
 curl http://faucet.cryptokylin.io/get_token?111111111ooo
 ```
