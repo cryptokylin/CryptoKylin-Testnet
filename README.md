@@ -67,7 +67,7 @@ docker-compose -f docker-compose-kylin.yaml up -d
 ## P2P LIST
 
 ```
-p2p-peer-address = 13.125.53.113:9876
+p2p-peer-address = kylinnet.eosstore.link:9876
 p2p-peer-address = 119.254.15.40:9876
 p2p-peer-address = 39.108.231.157:23225
 p2p-peer-address = p2p.kylin.eoseco.com:10000
