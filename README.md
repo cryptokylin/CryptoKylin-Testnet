@@ -77,6 +77,11 @@ p2p-peer-address = peering-kylin.eosasia.one:80
 p2p-peer-address = kylin.meet.one:9876
 p2p-peer-address = peer.kylin.alohaeos.com:9876
 p2p-peer-address = p2p.kylin.helloeos.com.cn:9876
+p2p-peer-address = kylin-testnet.starteos.io:9876
+p2p-peer-address = kylin-fn001.eossv.org:443
+p2p-peer-address = kylin-fn001.eossv.org:443
+p2p-peer-address = api-kylin.eoshenzhen.io:9876
+p2p-peer-address = p2p.kylin.eosbeijing.one:8080
 ```
 
 ## BNET LIST
@@ -99,6 +104,10 @@ http://119.254.15.40:8888/v1/chain/get_info
 http://kylin.meet.one:8888/v1/chain/get_info
 https://api.kylin.alohaeos.com/v1/chain/get_info
 http://api.kylin.helloeos.com.cn/v1/chain/get_info
+http://api-kylin.starteos.io/v1/chain/get_info
+http://kylin-fn001.eossv.org/v1/chain/get_info
+http://api-kylin.eoshenzhen.io:8890/v1/chain/get_info
+http://api.kylin.eosbeijing.one:8880/v1/chain/get_info
 ```
 
 ### Faucet
