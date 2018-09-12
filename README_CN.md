@@ -80,6 +80,7 @@ p2p-peer-address = p2p.kylin.helloeos.com.cn:9876
 p2p-peer-address = kylin-testnet.starteos.io:9876
 p2p-peer-address = kylin-fn001.eossv.org:443
 p2p-peer-address = p2p.kylin.eosbeijing.one:8080
+p2p-peer-address = testnet.zbeos.com:9876
 ```
 
 ## BNET 节点列表
@@ -105,6 +106,7 @@ http://api.kylin.helloeos.com.cn/v1/chain/get_info
 http://api.kylin.starteos.io/v1/chain/get_info
 http://kylin-fn001.eossv.org/v1/chain/get_info
 http://api.kylin.eosbeijing.one:8880/v1/chain/get_info
+http://testnet.zbeos.com/v1/chain/get_info
 ```
 
 ### 水龙头
