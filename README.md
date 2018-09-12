@@ -69,6 +69,7 @@ docker-compose -f docker-compose-kylin.yaml up -d
 ```
 p2p-peer-address = 13.125.53.113:9876
 p2p-peer-address = 119.254.15.40:9876
+p2p-peer-address = 39.108.231.157:23225
 p2p-peer-address = p2p.kylin.eoseco.com:10000
 p2p-peer-address = p2p-kylin.eoslaomao.com:443
 p2p-peer-address = p2p.kylin-testnet.eospace.io:88
@@ -94,6 +95,7 @@ bnet-connect = kylin.meet.one:4321
 ## HTTP API LIST
 
 ```
+http://39.108.231.157:30065/v1/chain/get_info
 https://api.kylin-testnet.eospace.io/v1/chain/get_info
 http://kylin.fn.eosbixin.com/v1/chain/get_info
 https://api-kylin.eosasia.one/v1/chain/get_info
