@@ -89,14 +89,19 @@ bnet-connect = kylin.meet.one:4321
 
 ## HTTP API LIST
 
+api node:
 ```
 https://api.kylin-testnet.eospace.io/v1/chain/get_info
 http://kylin.fn.eosbixin.com/v1/chain/get_info
-https://api-kylin.eosasia.one/v1/chain/get_info
-https://api-kylin.eoslaomao.com/v1/chain/get_info
 http://api.kylin.eoseco.com/v1/chain/get_info
 http://13.125.53.113:8888/v1/chain/get_info
 http://119.254.15.40:8888/v1/chain/get_info
+```
+
+api node(filter-on=*):
+```
+https://api-kylin.eoslaomao.com/v1/chain/get_info
+https://api-kylin.eosasia.one/v1/chain/get_info
 http://kylin.meet.one:8888/v1/chain/get_info
 ```
 
