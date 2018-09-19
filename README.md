@@ -98,7 +98,7 @@ http://13.125.53.113:8888/v1/chain/get_info
 http://119.254.15.40:8888/v1/chain/get_info
 ```
 
-api node(filter-on=*):
+api node ( filter-on=* ):
 ```
 https://api-kylin.eoslaomao.com/v1/chain/get_info
 https://api-kylin.eosasia.one/v1/chain/get_info
