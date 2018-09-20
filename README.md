@@ -102,7 +102,7 @@ api nodes support get actions ( filter-on=* ):
 ```
 https://api-kylin.eoslaomao.com/v1/chain/get_info
 https://api-kylin.eosasia.one/v1/chain/get_info
-https://kylin.meet.one/v1/chain/get_info
+https://api-kylin.meet.one/v1/chain/get_info
 ```
 
 ### Faucet
