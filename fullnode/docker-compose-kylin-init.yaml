@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  nodeosd:
+    image: cryptokylin/eos:v1.3.0
+    command: /opt/eosio/bin/nodeos --data-dir=/data --genesis-json=/etc/nodeos/genesis.json --config-dir=/etc/nodeos --delete-all-blocks
+    hostname: nodeosd
+    ports:
+      - 8890:8888
+      - 9878:9876
+    expose:
+      - "8888"
+    volumes:
+      - /data/eos/nodeos-data-volume/nodeos-data-kylin/config:/etc/nodeos
+      - /data/eos/nodeos-data-volume/nodeos-data-kylin/data:/data

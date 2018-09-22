@@ -27,21 +27,19 @@ cd fullnode
 The first step, create the desired directory:
 
 ```
-mkdir -p /data/eos/nodeos-data-volume/nodeos-data-kylin
-mkdir -p /data/eos/nodeos-data-volume/nodeos-data-kylin
+mkdir -p /data/eos/nodeos-data-volume/nodeos-data-kylin/data
 ```
 
 The second step is to prepare the configuration file:
 
 ```
-cp -r config.ini /data/eos/nodeos-data-volume/nodeos-data-kylin
-cp -r genesis.json /data/eos/nodeos-data-volume/nodeos-data-kylin
+cp -r config /data/eos/nodeos-data-volume/nodeos-data-kylin
 ```
 
 The third step, join the network:
 
 ```
-docker-compose -f docker-compose-kylin-init.yml up -d
+docker-compose -f docker-compose-kylin-init.yaml up -d
 ```
 
 ## Stop/Restart syncing
@@ -49,14 +47,14 @@ docker-compose -f docker-compose-kylin-init.yml up -d
 To stop:
 
 ```
-docker-compose -f docker-compose-kylin.yml down
+docker-compose -f docker-compose-kylin.yaml down
 ```
 
 To restart:
 
 ```
-docker-compose -f docker-compose-kylin.yml down
-docker-compose -f docker-compose-kylin.yml up -d
+docker-compose -f docker-compose-kylin.yaml down
+docker-compose -f docker-compose-kylin.yaml up -d
 ```
 ## Chain info
 
@@ -69,21 +67,29 @@ docker-compose -f docker-compose-kylin.yml up -d
 ## P2P LIST
 
 ```
-p2p-peer-address = 13.125.53.113:9876
-p2p-peer-address = 35.231.136.15:9878
+p2p-peer-address = kylinnet.eosstore.link:9876
 p2p-peer-address = 119.254.15.40:9876
+p2p-peer-address = 39.108.231.157:23225
 p2p-peer-address = p2p.kylin.eoseco.com:10000
 p2p-peer-address = p2p-kylin.eoslaomao.com:443
-p2p-peer-address = p2p.kylin-testnet.eospace.io:88
-p2p-peer-address = kylin.fnp2p.eosbixin.com:1080
+p2p-peer-address = p2p.kylin-testnet.eospacex.com:88
+p2p-peer-address = kylin.fnp2p.eosbixin.com:443
 p2p-peer-address = peering-kylin.eosasia.one:80
 p2p-peer-address = kylin.meet.one:9876
+p2p-peer-address = peer.kylin.alohaeos.com:9876
+p2p-peer-address = p2p.kylin.helloeos.com.cn:9876
+p2p-peer-address = kylin-testnet.starteos.io:9876
+p2p-peer-address = kylin-fn001.eossv.org:443
+p2p-peer-address = kylin-fn001.eossv.org:443
+p2p-peer-address = api-kylin.eoshenzhen.io:9876
+p2p-peer-address = p2p.kylin.eosbeijing.one:8080
+p2p-peer-address = testnet.zbeos.com:9876
 ```
 
 ## BNET LIST
 
 ```
-bnet-connect = kylin.fnbnet.eosbixin.com:1081
+bnet-connect = kylin.fnbnet.eosbixin.com:3389
 bnet-connect = kylin.meet.one:4321
 ```
 
@@ -91,11 +97,19 @@ bnet-connect = kylin.meet.one:4321
 
 api nodes:
 ```
-https://api.kylin-testnet.eospace.io/v1/chain/get_info
+http://39.108.231.157:30065/v1/chain/get_info
+https://api.kylin-testnet.eospacex.com/v1/chain/get_info
 http://kylin.fn.eosbixin.com/v1/chain/get_info
 http://api.kylin.eoseco.com/v1/chain/get_info
 http://13.125.53.113:8888/v1/chain/get_info
 http://119.254.15.40:8888/v1/chain/get_info
+https://api.kylin.alohaeos.com/v1/chain/get_info
+http://api.kylin.helloeos.com.cn/v1/chain/get_info
+http://api-kylin.starteos.io/v1/chain/get_info
+http://kylin-fn001.eossv.org/v1/chain/get_info
+http://api-kylin.eoshenzhen.io:8890/v1/chain/get_info
+http://api.kylin.eosbeijing.one:8880/v1/chain/get_info
+http://testnet.zbeos.com/v1/chain/get_info
 ```
 
 api nodes support get actions ( filter-on=* ):
@@ -106,7 +120,23 @@ https://api-kylin.meet.one/v1/chain/get_info
 ```
 
 ### Faucet
-you can get 100 tokens each call and max 1000 tokens per day. 
+
+Creating accounts on cryptokylin is pretty simple:
+
+#### Free Account
+Create account using: http://faucet.cryptokylin.io/create_account?new_account_name
+
+Example:
+```
+curl http://faucet.cryptokylin.io/create_account\?111111111ooo
+```
+
+#### Get Free tokens
+Get free token with: http://faucet.cryptokylin.io/get_token?your_account_name. 
+
+You can get 100 tokens each call and max 1000 tokens per day.
+
+Example:
 ``` 
-curl http://13.125.53.113/get_token?<your-account-name>
+curl http://faucet.cryptokylin.io/get_token?111111111ooo
 ```

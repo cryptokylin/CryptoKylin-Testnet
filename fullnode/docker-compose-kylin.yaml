@@ -2,7 +2,7 @@ version: "3"
 
 services:
   nodeosd:
-    image: noprom/eosmainnet:v1.0.8
+    image: cryptokylin/eos:v1.3.0
     command: /opt/eosio/bin/nodeos --data-dir=/data --config-dir=/etc/nodeos
     hostname: nodeosd
     ports:
@@ -11,5 +11,5 @@ services:
     expose:
       - "8888"
     volumes:
-      - /data/eos/nodeos-data-volume/nodeos-data-kylin:/etc/nodeos
+      - /data/eos/nodeos-data-volume/nodeos-data-kylin/config:/etc/nodeos
       - /data/eos/nodeos-data-volume/nodeos-data-kylin/data:/data
