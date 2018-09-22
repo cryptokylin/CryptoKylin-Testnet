@@ -95,16 +95,14 @@ bnet-connect = kylin.meet.one:4321
 
 ## HTTP API LIST
 
+api nodes:
 ```
 http://39.108.231.157:30065/v1/chain/get_info
 https://api.kylin-testnet.eospacex.com/v1/chain/get_info
 http://kylin.fn.eosbixin.com/v1/chain/get_info
-https://api-kylin.eosasia.one/v1/chain/get_info
-https://api-kylin.eoslaomao.com/v1/chain/get_info
 http://api.kylin.eoseco.com/v1/chain/get_info
 http://13.125.53.113:8888/v1/chain/get_info
 http://119.254.15.40:8888/v1/chain/get_info
-http://kylin.meet.one:8888/v1/chain/get_info
 https://api.kylin.alohaeos.com/v1/chain/get_info
 http://api.kylin.helloeos.com.cn/v1/chain/get_info
 http://api-kylin.starteos.io/v1/chain/get_info
@@ -112,6 +110,13 @@ http://kylin-fn001.eossv.org/v1/chain/get_info
 http://api-kylin.eoshenzhen.io:8890/v1/chain/get_info
 http://api.kylin.eosbeijing.one:8880/v1/chain/get_info
 http://testnet.zbeos.com/v1/chain/get_info
+```
+
+api nodes support get actions ( filter-on=* ):
+```
+https://api-kylin.eoslaomao.com/v1/chain/get_info
+https://api-kylin.eosasia.one/v1/chain/get_info
+https://api-kylin.meet.one/v1/chain/get_info
 ```
 
 ### Faucet
