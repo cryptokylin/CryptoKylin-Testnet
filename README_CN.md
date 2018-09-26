@@ -144,7 +144,6 @@ curl http://faucet.cryptokylin.io/get_token?111111111ooo
 #### Docker 版本
 
 - https://storage.googleapis.com/eos-kylin-backup
-- http://osshkbk01.oss-cn-hongkong.aliyuncs.com/eosarch/cryptokylin
 
 #### 非 docker 版本
 

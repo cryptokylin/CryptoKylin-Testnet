@@ -148,7 +148,6 @@ For those of you who want to sync fast to the latest block, you can use these ba
 #### Docker version
 
 - https://storage.googleapis.com/eos-kylin-backup
-- http://osshkbk01.oss-cn-hongkong.aliyuncs.com/eosarch/cryptokylin
 
 #### Non docker version
 
