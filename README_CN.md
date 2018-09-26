@@ -92,24 +92,31 @@ bnet-connect = kylin.meet.one:4321
 
 ## HTTP API 节点列表
 
+API nodes:
 ```
+http://39.108.231.157:30065/v1/chain/get_info
 https://api.kylin-testnet.eospacex.com/v1/chain/get_info
 http://kylin.fn.eosbixin.com/v1/chain/get_info
-https://api-kylin.eosasia.one/v1/chain/get_info
-https://api-kylin.eoslaomao.com/v1/chain/get_info
 http://api.kylin.eoseco.com/v1/chain/get_info
 http://13.125.53.113:8888/v1/chain/get_info
 http://119.254.15.40:8888/v1/chain/get_info
-http://kylin.meet.one:8888/v1/chain/get_info
 https://api.kylin.alohaeos.com/v1/chain/get_info
 http://api.kylin.helloeos.com.cn/v1/chain/get_info
-http://api.kylin.starteos.io/v1/chain/get_info
+http://api-kylin.starteos.io/v1/chain/get_info
 http://kylin-fn001.eossv.org/v1/chain/get_info
+http://api-kylin.eoshenzhen.io:8890/v1/chain/get_info
 http://api.kylin.eosbeijing.one:8880/v1/chain/get_info
 http://testnet.zbeos.com/v1/chain/get_info
 ```
 
-### 水龙头
+支持 `get actions` ( filter-on=* ) 的API:
+```
+https://api-kylin.eoslaomao.com/v1/chain/get_info
+https://api-kylin.eosasia.one/v1/chain/get_info
+https://api-kylin.meet.one/v1/chain/get_info
+```
+
+## 水龙头
 
 在 `cryptokylin` 上创建账号非常简单:
 
@@ -129,3 +136,16 @@ curl http://faucet.cryptokylin.io/create_account\?111111111ooo
 ``` 
 curl http://faucet.cryptokylin.io/get_token?111111111ooo
 ```
+
+## 备份文件
+
+可以通过下列备份文件快速同步麒麟测试网节点:
+
+#### Docker 版本
+
+- https://storage.googleapis.com/eos-kylin-backup
+- http://osshkbk01.oss-cn-hongkong.aliyuncs.com/eosarch/cryptokylin
+
+#### 非 docker 版本
+
+- https://s3-ap-northeast-1.amazonaws.com/cryptokylin-eosstore/index.html

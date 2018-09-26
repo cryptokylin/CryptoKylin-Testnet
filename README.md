@@ -95,7 +95,7 @@ bnet-connect = kylin.meet.one:4321
 
 ## HTTP API LIST
 
-api nodes:
+API nodes:
 ```
 http://39.108.231.157:30065/v1/chain/get_info
 https://api.kylin-testnet.eospacex.com/v1/chain/get_info
@@ -112,14 +112,14 @@ http://api.kylin.eosbeijing.one:8880/v1/chain/get_info
 http://testnet.zbeos.com/v1/chain/get_info
 ```
 
-api nodes support get actions ( filter-on=* ):
+API nodes support get actions ( filter-on=* ):
 ```
 https://api-kylin.eoslaomao.com/v1/chain/get_info
 https://api-kylin.eosasia.one/v1/chain/get_info
 https://api-kylin.meet.one/v1/chain/get_info
 ```
 
-### Faucet
+## Faucet
 
 Creating accounts on cryptokylin is pretty simple:
 
@@ -140,3 +140,16 @@ Example:
 ``` 
 curl http://faucet.cryptokylin.io/get_token?111111111ooo
 ```
+
+## Backup files
+
+For those of you who want to sync fast to the latest block, you can use these backup files here:
+
+#### Docker version
+
+- https://storage.googleapis.com/eos-kylin-backup
+- http://osshkbk01.oss-cn-hongkong.aliyuncs.com/eosarch/cryptokylin
+
+#### Non docker version
+
+- https://s3-ap-northeast-1.amazonaws.com/cryptokylin-eosstore/index.html
