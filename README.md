@@ -69,9 +69,10 @@ docker-compose -f docker-compose-kylin.yaml up -d
 ```
 p2p-peer-address = kylinnet.eosstore.link:9876
 p2p-peer-address = 119.254.15.40:9876
+p2p-peer-address = 39.108.231.157:23225
 p2p-peer-address = p2p.kylin.eoseco.com:10000
 p2p-peer-address = p2p-kylin.eoslaomao.com:443
-p2p-peer-address = p2p.kylin-testnet.eospace.io:88
+p2p-peer-address = p2p.kylin-testnet.eospacex.com:88
 p2p-peer-address = kylin.fnp2p.eosbixin.com:443
 p2p-peer-address = peering-kylin.eosasia.one:80
 p2p-peer-address = kylin.meet.one:9876
@@ -82,6 +83,7 @@ p2p-peer-address = kylin-fn001.eossv.org:443
 p2p-peer-address = kylin-fn001.eossv.org:443
 p2p-peer-address = api-kylin.eoshenzhen.io:9876
 p2p-peer-address = p2p.kylin.eosbeijing.one:8080
+p2p-peer-address = testnet.zbeos.com:9876
 ```
 
 ## BNET LIST
@@ -93,24 +95,32 @@ bnet-connect = kylin.meet.one:4321
 
 ## HTTP API LIST
 
+API nodes:
 ```
-https://api.kylin-testnet.eospace.io/v1/chain/get_info
+http://39.108.231.157:30065/v1/chain/get_info
+https://api.kylin-testnet.eospacex.com/v1/chain/get_info
 http://kylin.fn.eosbixin.com/v1/chain/get_info
-https://api-kylin.eosasia.one/v1/chain/get_info
-https://api-kylin.eoslaomao.com/v1/chain/get_info
 http://api.kylin.eoseco.com/v1/chain/get_info
 http://13.125.53.113:8888/v1/chain/get_info
 http://119.254.15.40:8888/v1/chain/get_info
-http://kylin.meet.one:8888/v1/chain/get_info
 https://api.kylin.alohaeos.com/v1/chain/get_info
 http://api.kylin.helloeos.com.cn/v1/chain/get_info
 http://api-kylin.starteos.io/v1/chain/get_info
 http://kylin-fn001.eossv.org/v1/chain/get_info
 http://api-kylin.eoshenzhen.io:8890/v1/chain/get_info
 http://api.kylin.eosbeijing.one:8880/v1/chain/get_info
+http://testnet.zbeos.com/v1/chain/get_info
+https://kylin.eoscanada.com
 ```
 
-### Faucet
+API nodes support get actions ( filter-on=* ):
+```
+https://api-kylin.eoslaomao.com/v1/chain/get_info
+https://api-kylin.eosasia.one/v1/chain/get_info
+https://api-kylin.meet.one/v1/chain/get_info
+```
+
+## Faucet
 
 Creating accounts on cryptokylin is pretty simple:
 
@@ -132,3 +142,15 @@ Example:
 ``` 
 curl http://faucet.cryptokylin.io/get_token?111111111ooo
 ```
+
+## Backup files
+
+For those of you who want to sync fast to the latest block, you can use these backup files here:
+
+#### Docker version
+
+- https://storage.googleapis.com/eos-kylin-backup
+
+#### Non docker version
+
+- https://s3-ap-northeast-1.amazonaws.com/cryptokylin-eosstore/index.html
