@@ -132,7 +132,3 @@ Example:
 ``` 
 curl http://faucet.cryptokylin.io/get_token?111111111ooo
 ```
-or
-```
-curl http://13.230.87.138:80/get_token?111111111ooo
-```
