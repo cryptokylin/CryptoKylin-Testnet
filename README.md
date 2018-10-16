@@ -132,6 +132,7 @@ Example:
 curl http://faucet.cryptokylin.io/create_account\?111111111ooo
 ```
 
+
 #### Get Free tokens
 Get free token with: http://faucet.cryptokylin.io/get_token?your_account_name.   
 If you can't access domain name `faucet.cryptokylin.io`, use the IP address `13.230.87.138` directly.  
@@ -142,6 +143,10 @@ Example:
 curl http://faucet.cryptokylin.io/get_token?111111111ooo
 or
 curl http://13.230.87.138/get_token?111111111ooo
+```
+or
+```
+curl http://13.230.87.138:80/get_token?111111111ooo
 ```
 
 ## Backup files
