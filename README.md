@@ -110,13 +110,13 @@ http://kylin-fn001.eossv.org/v1/chain/get_info
 http://api-kylin.eoshenzhen.io:8890/v1/chain/get_info
 http://api.kylin.eosbeijing.one:8880/v1/chain/get_info
 http://testnet.zbeos.com/v1/chain/get_info
+http://kylin.meet.one:8888/v1/chain/get_info
 ```
 
 api nodes support get actions ( filter-on=* ):
 ```
 https://api-kylin.eoslaomao.com/v1/chain/get_info
 https://api-kylin.eosasia.one/v1/chain/get_info
-https://api-kylin.meet.one/v1/chain/get_info
 ```
 
 ### Faucet
