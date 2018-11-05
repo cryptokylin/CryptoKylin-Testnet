@@ -21,12 +21,12 @@ tmp_dir="${home_dir}/tmp/eosio.contracts.v1.4.0"
 mkdir -p ${tmp_dir} && cd ${tmp_dir}
 repo_dir=<your eosio.contracts repo absolute directory>  # such as repo_dir='/Code/github.com/cryptokylin/eosio.contracts'
 build_dir=${repo_dir}/build
-alias cleos='cleos -u https://api.eosstore.co' 
+alias cleos='cleos -u http://kylin.fn.eosbixin.com' 
 for c in token msig system wrap; do \
 cleos set contract eosio ${build_dir}/eosio.${c} -j -d -s > eosio.${c}.update_tx.json; done
 
 # step 3: modify these json files.
-expiration="2018-11-10T12:00:00"
+expiration="2018-11-10T12:00:00"        # you can set this time to three or ten days later as you want.
 for file in `ls`; do 
 sed s/.*\"expiration\":.*/\ \ \"expiration\":\ \"${expiration}\",/g  ${file} |\
 sed s/.*\"ref_block_num\":.*/\ \ \"ref_block_num\":\ 0,/g                    |\
@@ -55,11 +55,43 @@ cleos multisig propose_trx updatesysct3 permissions.json eosio.token.update_tx.j
 cleos multisig propose_trx updatesysct4 permissions.json eosio.wrap.update_tx.json.m   eosstorebest
 ```
 
-### Top 21 bps review and approve prosposals if verified
-``` bash
+### Send the following message to top 21 bps.
 
+Hi Top 21 BPs, https://github.com/EOSIO/eosio.contracts released a new version of v1.4.0 . 
+I compiled the contracts and proposed several update proposals.
+
+You can check the source code at https://github.com/cryptokylin/eosio.contracts/tree/v1.4.0-fixed ,
+here I just complete these ABI files and without any other modification.
+
+You can use the following commands to see the contents of the proposals.
+``` bash
+alias cleos='cleos -u http://kylin.fn.eosbixin.com' 
+cleos multisig review eosstorebest updatesysct1
+cleos multisig review eosstorebest updatesysct2
+cleos multisig review eosstorebest updatesysct3
+cleos multisig review eosstorebest updatesysct4
 
 ```
+You can check the approved status by following cmds.
+``` bash
+cleos get table eosio.msig updatesysct1 approvals
+cleos get table eosio.msig updatesysct2 approvals
+cleos get table eosio.msig updatesysct3 approvals
+cleos get table eosio.msig updatesysct4 approvals
+```
+
+If you confirm it, you can pass the validation.
+I set "expiration": "2018-11-10T12:00:00" in every proposal, so if it's ok, approve it before that time please.
+``` bash
+cleos multisig approve eosstorebest updatesysct1 '{"<your-bp-name>":"active"}' -p <your-bp-name>
+# and other proposals: updatesysct2 updatesysct3 updatesysct4;
+```
+
+(the Kylin Testnet's current system contracts version is v1.3.2)
 
 
-
+### Execute proposal when get enough approves.
+``` bash
+cleos multisig exec eosstorebest updatesysct1 -p eosstorebest
+# and other proposals: updatesysct2 updatesysct3 updatesysct4;
+```
