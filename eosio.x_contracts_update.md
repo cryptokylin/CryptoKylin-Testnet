@@ -5,7 +5,7 @@ After a new version released, we need to deploy the new contracts to the Kylin t
 
 Note: Automatically generated ABI files are generally incomplete and require manual modification to work properly. 
 You can refer to it [github.com/cryptokylin/eosio.contracts](https://github.com/cryptokylin/eosio.contracts)'s
-branch v1.4.0-fixed, which complements the missing content in the ABI files.
+branch [v1.4.0-fixed](https://github.com/cryptokylin/eosio.contracts/tree/v1.4.0-fixed), which complements the missing content in the ABI files.
 
 
 ### Steps for propose update proposals
