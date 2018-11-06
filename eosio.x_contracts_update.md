@@ -78,7 +78,7 @@ cleos get table eosio.msig eosstorebest approvals | jq '.rows[]|select(.proposal
 If you confirm it, you can pass the validation.  
 I set "expiration": "2018-11-10T12:00:00" in every proposal, so if it's ok, approve it before that time please.  
 
-cleos multisig approve eosstorebest updatesysct1 '{"<your-bp-name>":"active"}' -p <your-bp-name>  
+cleos multisig approve eosstorebest updatesysct1 '{"your-bp-name":"active"}' -p your-bp-name  
 
 and other proposals: updatesysct2 updatesysct3 updatesysct4;  
 
