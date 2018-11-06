@@ -74,10 +74,9 @@ cleos multisig review eosstorebest updatesysct4
 ```
 You can check the approved status by following cmds.
 ``` bash
-cleos get table eosio.msig updatesysct1 approvals
-cleos get table eosio.msig updatesysct2 approvals
-cleos get table eosio.msig updatesysct3 approvals
-cleos get table eosio.msig updatesysct4 approvals
+# to get proposal updatesysct1's status:
+cleos get table eosio.msig eosstorebest approvals | jq '.rows[]|select(.proposal_name=="updatesysct1")'
+
 ```
 
 If you confirm it, you can pass the validation.
