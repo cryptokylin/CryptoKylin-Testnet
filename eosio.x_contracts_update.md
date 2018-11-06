@@ -64,27 +64,23 @@ You can check the source code at https://github.com/cryptokylin/eosio.contracts/
 here I just complete these ABI files and without any other modification.
 
 You can use the following commands to see the contents of the proposals.
-``` bash
+ 
 alias cleos='cleos -u http://kylin.fn.eosbixin.com' 
 cleos multisig review eosstorebest updatesysct1
 cleos multisig review eosstorebest updatesysct2
 cleos multisig review eosstorebest updatesysct3
 cleos multisig review eosstorebest updatesysct4
 
-```
 You can check the approved status by following cmds.
-``` bash
-# to get proposal updatesysct1's status:
+To get proposal updatesysct1's status:
 cleos get table eosio.msig eosstorebest approvals | jq '.rows[]|select(.proposal_name=="updatesysct1")'
-
-```
 
 If you confirm it, you can pass the validation.
 I set "expiration": "2018-11-10T12:00:00" in every proposal, so if it's ok, approve it before that time please.
-``` bash
+
 cleos multisig approve eosstorebest updatesysct1 '{"<your-bp-name>":"active"}' -p <your-bp-name>
-# and other proposals: updatesysct2 updatesysct3 updatesysct4;
-```
+
+and other proposals: updatesysct2 updatesysct3 updatesysct4;
 
 (the Kylin Testnet's current system contracts version is v1.3.1)
 
@@ -92,5 +88,5 @@ cleos multisig approve eosstorebest updatesysct1 '{"<your-bp-name>":"active"}' -
 ### Execute proposal when get enough approves.
 ``` bash
 cleos multisig exec eosstorebest updatesysct1 -p eosstorebest
-# and other proposals: updatesysct2 updatesysct3 updatesysct4;
+## and other proposals: updatesysct2 updatesysct3 updatesysct4;
 ```
