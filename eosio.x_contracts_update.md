@@ -10,7 +10,7 @@ branch [v1.4.0-fixed](https://github.com/cryptokylin/eosio.contracts/tree/v1.4.0
 
 ### Steps for propose update proposals
 ``` bash
-# step 1: build eosio.contracts and check generated *.abi files.
+# step 1: build eosio.contracts, check generated *.abi files and add ricardians.
 git clone https://github.com/cryptokylin/eosio.contracts
 cd eosio.contracts && git checkout v1.4.0-fixed
 ./build.sh
