@@ -86,7 +86,7 @@ cleos multisig approve eosstorebest updatesysct1 '{"<your-bp-name>":"active"}' -
 # and other proposals: updatesysct2 updatesysct3 updatesysct4;
 ```
 
-(the Kylin Testnet's current system contracts version is v1.3.2)
+(the Kylin Testnet's current system contracts version is v1.3.1)
 
 
 ### Execute proposal when get enough approves.
