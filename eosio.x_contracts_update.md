@@ -23,7 +23,7 @@ repo_dir=<your eosio.contracts repo absolute directory>  # such as repo_dir='/Co
 build_dir=${repo_dir}/build
 alias cleos='cleos -u http://kylin.fn.eosbixin.com' 
 for c in token msig system wrap; do \
-cleos set contract eosio ${build_dir}/eosio.${c} -j -d -s > eosio.${c}.update_tx.json; done
+cleos set contract eosio.${c} ${build_dir}/eosio.${c} -j -d -s > eosio.${c}.update_tx.json; done
 
 # step 3: modify these json files.
 expiration="2018-11-10T12:00:00"        # you can set this time to three or ten days later as you want.
