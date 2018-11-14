@@ -162,8 +162,20 @@ For those of you who want to sync fast to the latest block, you can use these ba
 ### How to use backup
 #### docker version
 - First get the back-up from the https://storage.googleapis.com/eos-kylin-backup 
+```
+   wget https://storage.googleapis.com/eos-kylin-backup/kylin-20181114060001.zip
+```
 - Decompress the package to the path which in your config,and modify name which in your config 
+```
+   tar -zxvf kylin-20181114060001.zip -C /
+   cd /data/eos/nodeos-data-volume/
+   mv nodeos-data-eospace-kylinbackup2 nodeos-data-kylin
+```
 - Start docker 
+```
+   docker-compose -f docker-compose-kylin.yaml up -d
+```
+
 #### Non docker version
 - First get the latest back-up from the https://s3-ap-northeast-1.amazonaws.com/cryptokylin-eosstore/index.html 
 - Decompress the package to the path which in your nodeos's config
