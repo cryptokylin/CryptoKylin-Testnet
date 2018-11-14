@@ -158,3 +158,14 @@ For those of you who want to sync fast to the latest block, you can use these ba
 #### Non docker version
 
 - https://s3-ap-northeast-1.amazonaws.com/cryptokylin-eosstore/index.html
+
+### How to use backup
+#### docker version
+- First get the back-up from the https://storage.googleapis.com/eos-kylin-backup 
+- Decompress the package to the path which in your config,and modify name which in your config 
+- Start docker 
+#### Non docker version
+- First get the latest back-up from the https://s3-ap-northeast-1.amazonaws.com/cryptokylin-eosstore/index.html 
+- Decompress the package to the path which in your nodeos's config
+- Start nodeos
+
