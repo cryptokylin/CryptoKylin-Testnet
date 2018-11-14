@@ -161,8 +161,8 @@ curl http://13.230.87.138:80/get_token?111111111ooo
 ```
 - 在本地把数据解压到自己的配置文件中的路径下，并且修改自己配置文件中写的文件夹的名称，例如：
 ```
-   tar -zxvf kylin-20181114060001.zip 
-   cd data/eos/nodeos-data-volume/
+   tar -zxvf kylin-20181114060001.zip -C /
+   cd /data/eos/nodeos-data-volume/
    mv nodeos-data-eospace-kylinbackup2 nodeos-data-kylin
 ```
 - 启动docker 
