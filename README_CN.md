@@ -163,6 +163,7 @@ curl http://13.230.87.138:80/get_token?111111111ooo
 - 首先访问网址，获取到最新的备份数据  
 - 把数据解压到自己的配置文件中的指定路径下
 - 启动nodeos程序
+- 详细操作：https://github.com/zsq978663747/eos-doc/blob/master/eos_block_backup_cn.md
 
 
 
