@@ -168,4 +168,4 @@ For those of you who want to sync fast to the latest block, you can use these ba
 - First get the latest back-up from the https://s3-ap-northeast-1.amazonaws.com/cryptokylin-eosstore/index.html 
 - Decompress the package to the path which in your nodeos's config
 - Start nodeos
-
+dail:https://github.com/zsq978663747/eos-doc/blob/master/eos_block_backup_cn.md 
