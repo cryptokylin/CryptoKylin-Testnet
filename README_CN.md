@@ -155,9 +155,9 @@ curl http://13.230.87.138:80/get_token?111111111ooo
 
 ### 如何使用备份
 #### docker版本
-- 首先通过网址获取到最新的备份数据
-- 在本地把数据解压到自己的配置文件中的路径下，并且修改自己配置文件中写的文件夹的名称
-- 启动docker
+- 首先通过网址获取到最新的备份数据，例如：```wget https://storage.googleapis.com/eos-kylin-backup/kylin-20181114060001.zip```
+- 在本地把数据解压到自己的配置文件中的路径下，并且修改自己配置文件中写的文件夹的名称，例如：```tar -zxvf kylin-20181114060001.zip;cp kylin-20181114060001  /data/eos/nodeos-data-volume/nodeos-data-kylin```
+- 启动docker ```docker-compose -f docker-compose-kylin.yaml up -d```
 
 #### 非docker版本
 - 首先访问网址，获取到最新的备份数据  
