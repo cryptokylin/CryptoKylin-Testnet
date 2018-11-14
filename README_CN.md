@@ -152,3 +152,19 @@ curl http://13.230.87.138:80/get_token?111111111ooo
 #### 非 docker 版本
 
 - https://s3-ap-northeast-1.amazonaws.com/cryptokylin-eosstore/index.html
+
+### 如何使用备份
+#### docker版本
+- 首先通过网址获取到最新的备份数据
+- 在本地把数据解压到自己的配置文件中的路径下，并且修改自己配置文件中写的文件夹的名称
+- 启动docker
+
+#### 非docker版本
+- 首先访问网址，获取到最新的备份数据  
+- 把数据解压到自己的配置文件中的指定路径下
+- 启动nodeos程序
+
+
+
+
+
