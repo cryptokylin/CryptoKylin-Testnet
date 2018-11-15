@@ -92,24 +92,31 @@ bnet-connect = kylin.meet.one:4321
 
 ## HTTP API 节点列表
 
+API nodes:
 ```
+http://39.108.231.157:30065/v1/chain/get_info
 https://api.kylin-testnet.eospacex.com/v1/chain/get_info
 http://kylin.fn.eosbixin.com/v1/chain/get_info
-https://api-kylin.eosasia.one/v1/chain/get_info
-https://api-kylin.eoslaomao.com/v1/chain/get_info
 http://api.kylin.eoseco.com/v1/chain/get_info
 http://13.125.53.113:8888/v1/chain/get_info
 http://119.254.15.40:8888/v1/chain/get_info
-http://kylin.meet.one:8888/v1/chain/get_info
 https://api.kylin.alohaeos.com/v1/chain/get_info
 http://api.kylin.helloeos.com.cn/v1/chain/get_info
-http://api.kylin.starteos.io/v1/chain/get_info
+http://api-kylin.starteos.io/v1/chain/get_info
 http://kylin-fn001.eossv.org/v1/chain/get_info
+http://api-kylin.eoshenzhen.io:8890/v1/chain/get_info
 http://api.kylin.eosbeijing.one:8880/v1/chain/get_info
 http://testnet.zbeos.com/v1/chain/get_info
 ```
 
-### 水龙头
+支持 `get actions` ( filter-on=* ) 的API:
+```
+https://api-kylin.eoslaomao.com/v1/chain/get_info
+https://api-kylin.eosasia.one/v1/chain/get_info
+https://api-kylin.meet.one/v1/chain/get_info
+```
+
+## 水龙头
 
 在 `cryptokylin` 上创建账号非常简单:
 
@@ -129,3 +136,47 @@ curl http://faucet.cryptokylin.io/create_account\?111111111ooo
 ``` 
 curl http://faucet.cryptokylin.io/get_token?111111111ooo
 ```
+或者
+```
+curl http://13.230.87.138:80/get_token?111111111ooo
+```
+
+## 备份文件
+
+可以通过下列备份文件快速同步麒麟测试网节点:
+
+#### Docker 版本
+
+- https://storage.googleapis.com/eos-kylin-backup
+
+#### 非 docker 版本
+
+- https://s3-ap-northeast-1.amazonaws.com/cryptokylin-eosstore/index.html
+
+### 如何使用备份
+#### docker版本
+- 首先通过网址获取到最新的备份数据，例如：
+```
+   wget https://storage.googleapis.com/eos-kylin-backup/kylin-20181114060001.zip
+```
+- 在本地把数据解压到自己的配置文件中的路径下，并且修改自己配置文件中写的文件夹的名称，例如：
+```
+   tar -zxvf kylin-20181114060001.zip -C /
+   cd /data/eos/nodeos-data-volume/
+   mv nodeos-data-eospace-kylinbackup2 nodeos-data-kylin
+```
+- 启动docker 
+```
+   docker-compose -f docker-compose-kylin.yaml up -d
+```
+
+#### 非docker版本
+- 首先访问网址，获取到最新的备份数据  
+- 把数据解压到自己的配置文件中的指定路径下
+- 启动nodeos程序
+- 详细操作：https://github.com/zsq978663747/eos-doc/blob/master/eos_block_backup_cn.md
+
+
+
+
+
