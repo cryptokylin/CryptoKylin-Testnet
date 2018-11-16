@@ -2,7 +2,7 @@ version: "3"
 
 services:
   nodeosd:
-    image: cryptokylin/eos:v1.4.2
+    image: cryptokylin/eos:v1.4.3
     command: /opt/eosio/bin/nodeos --data-dir=/data --config-dir=/etc/nodeos
     hostname: nodeosd
     ports:
