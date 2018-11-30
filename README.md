@@ -143,11 +143,7 @@ Example:
 ``` 
 curl http://faucet.cryptokylin.io/get_token?111111111ooo
 or
-curl http://13.230.87.138/get_token?111111111ooo
-```
-or
-```
-curl http://13.230.87.138:80/get_token?111111111ooo
+curl http://52.68.57.226/get_token?111111111ooo
 ```
 
 ## Backup files
