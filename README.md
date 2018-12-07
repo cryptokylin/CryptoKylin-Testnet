@@ -104,6 +104,7 @@ http://api.kylin.eoseco.com/v1/chain/get_info
 http://178.62.36.41/v1/chain/get_info
 https://api.kylin.alohaeos.com/v1/chain/get_info
 http://api.kylin.helloeos.com.cn/v1/chain/get_info
+https://kylin.eoscanada.com/v1/chain/get_info
 http://api-kylin.starteos.io/v1/chain/get_info
 http://api.kylin.eosbeijing.one:8880/v1/chain/get_info
 http://kylin-testnet.jeda.one:8888/v1/chain/get_info
