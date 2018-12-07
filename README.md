@@ -101,7 +101,7 @@ http://39.108.231.157:30065/v1/chain/get_info
 https://api.kylin-testnet.eospacex.com/v1/chain/get_info
 http://kylin.fn.eosbixin.com/v1/chain/get_info
 http://api.kylin.eoseco.com/v1/chain/get_info
-http://178.62.36.41/v1/chain/get_info
+http://178.62.36.41:8888/v1/chain/get_info
 https://api.kylin.alohaeos.com/v1/chain/get_info
 http://api.kylin.helloeos.com.cn/v1/chain/get_info
 https://kylin.eoscanada.com/v1/chain/get_info
