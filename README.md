@@ -131,8 +131,7 @@ curl http://faucet.cryptokylin.io/create/111111111ooo
 
 
 #### Get Free tokens
-Get free token with: http://faucet.cryptokylin.io/get_token/your_account_name.   
-If you can't access domain name `faucet.cryptokylin.io`, use the IP address `13.230.87.138` directly.  
+Get free token with: http://faucet.cryptokylin.io/get_token/your_account_name.
 You can get 100 tokens each call and max 1000 tokens per day.  
 
 Example:
@@ -140,7 +139,7 @@ Example:
 curl http://faucet.cryptokylin.io/get_token/111111111ooo
 ```
 
-## Backup files
+## Backup files (Not in maintenance)
 
 For those of you who want to sync fast to the latest block, you can use these backup files here:
 

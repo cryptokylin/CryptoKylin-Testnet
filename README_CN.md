@@ -121,27 +121,23 @@ https://api-kylin.meet.one/v1/chain/get_info
 在 `cryptokylin` 上创建账号非常简单:
 
 #### 免费账号
-创建免费账号: http://faucet.cryptokylin.io/create_account?new_account_name
+创建免费账号: http://faucet.cryptokylin.io/create/new_account_name
 
 例子:
 ```
-curl http://faucet.cryptokylin.io/create_account\?111111111ooo
+curl http://faucet.cryptokylin.io/create/111111111ooo
 ```
 
 #### 获得免费Token
-获得免费Token: http://faucet.cryptokylin.io/get_token?your_account_name. 
+获得免费Token: http://faucet.cryptokylin.io/get_token/your_account_name.
 每一次调用能获得100EOS, 每天最多获得1000个EOS.
 
 例子:
 ``` 
-curl http://faucet.cryptokylin.io/get_token?111111111ooo
-```
-或者
-```
-curl http://52.68.57.226/get_token?111111111ooo
+curl http://faucet.cryptokylin.io/get_token/111111111ooo
 ```
 
-## 备份文件
+## 备份文件 (不再维护)
 
 可以通过下列备份文件快速同步麒麟测试网节点:
 
@@ -175,8 +171,3 @@ curl http://52.68.57.226/get_token?111111111ooo
 - 把数据解压到自己的配置文件中的指定路径下
 - 启动nodeos程序
 - 详细操作：https://github.com/zsq978663747/eos-doc/blob/master/eos_block_backup_cn.md
-
-
-
-
-
