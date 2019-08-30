@@ -122,24 +122,22 @@ https://api-kylin.eosasia.one/v1/chain/get_info
 Creating accounts on cryptokylin is pretty simple:
 
 #### Free Account
-Create account using: http://faucet.cryptokylin.io/create_account?new_account_name
+Create account using: http://faucet.cryptokylin.io/create/new_account_name
 
 Example:
 ```
-curl http://faucet.cryptokylin.io/create_account\?111111111ooo
+curl http://faucet.cryptokylin.io/create/111111111ooo
 ```
 
 
 #### Get Free tokens
-Get free token with: http://faucet.cryptokylin.io/get_token?your_account_name.   
+Get free token with: http://faucet.cryptokylin.io/get_token/your_account_name.   
 If you can't access domain name `faucet.cryptokylin.io`, use the IP address `13.230.87.138` directly.  
 You can get 100 tokens each call and max 1000 tokens per day.  
 
 Example:
 ``` 
-curl http://faucet.cryptokylin.io/get_token?111111111ooo
-or
-curl http://52.68.57.226/get_token?111111111ooo
+curl http://faucet.cryptokylin.io/get_token/111111111ooo
 ```
 
 ## Backup files
