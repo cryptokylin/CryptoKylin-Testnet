@@ -72,7 +72,6 @@ p2p-peer-address = 119.254.15.40:9876
 p2p-peer-address = p2p.kylin.eoseco.com:10000
 p2p-peer-address = p2p-kylin.eoslaomao.com:443
 p2p-peer-address = p2p.kylin-testnet.eospacex.com:88
-p2p-peer-address = kylin.fnp2p.eosbixin.com:443
 p2p-peer-address = peering-kylin.eosasia.one:80
 p2p-peer-address = kylin.meet.one:9876
 p2p-peer-address = peer.kylin.alohaeos.com:9876
@@ -83,20 +82,12 @@ p2p-peer-address = p2p.kylin.eosbeijing.one:8080
 p2p-peer-address = testnet.zbeos.com:9876
 ```
 
-## BNET 节点列表
-
-```
-bnet-connect = kylin.fnbnet.eosbixin.com:3389
-bnet-connect = kylin.meet.one:4321
-```
-
 ## HTTP API 节点列表
 
 API nodes:
 ```
 http://39.108.231.157:30065/v1/chain/get_info
 https://api.kylin-testnet.eospacex.com/v1/chain/get_info
-http://kylin.fn.eosbixin.com/v1/chain/get_info
 http://api.kylin.eoseco.com/v1/chain/get_info
 http://13.125.53.113:8888/v1/chain/get_info
 http://119.254.15.40:8888/v1/chain/get_info
@@ -121,20 +112,20 @@ https://api-kylin.meet.one/v1/chain/get_info
 在 `cryptokylin` 上创建账号非常简单:
 
 #### 免费账号
-创建免费账号: http://faucet.cryptokylin.io/create/new_account_name
+创建免费账号: http://faucet-kylin.blockzone.net/create/new_account_name
 
 例子:
 ```
-curl http://faucet.cryptokylin.io/create/111111111ooo
+curl http://faucet-kylin.blockzone.net/create/111111111ooo
 ```
 
 #### 获得免费Token
-获得免费Token: http://faucet.cryptokylin.io/get_token/your_account_name.
+获得免费Token: http://faucet-kylin.blockzone.net/get_token/your_account_name.
 每一次调用能获得100EOS, 每天最多获得1000个EOS.
 
 例子:
 ``` 
-curl http://faucet.cryptokylin.io/get_token/111111111ooo
+curl http://faucet-kylin.blockzone.net/get_token/111111111ooo
 ```
 
 ## 备份文件 (不再维护)

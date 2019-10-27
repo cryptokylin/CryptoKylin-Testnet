@@ -73,7 +73,6 @@ p2p-peer-address = 39.108.231.157:23225
 p2p-peer-address = p2p.kylin.eoseco.com:10000
 p2p-peer-address = p2p-kylin.eoslaomao.com:443
 p2p-peer-address = p2p.kylin-testnet.eospacex.com:88
-p2p-peer-address = kylin.fnp2p.eosbixin.com:443
 p2p-peer-address = peering-kylin.eosasia.one:80
 p2p-peer-address = kylin.meet.one:9876
 p2p-peer-address = peer.kylin.alohaeos.com:9876
@@ -86,20 +85,12 @@ p2p-peer-address = p2p.kylin.eosbeijing.one:8080
 p2p-peer-address = testnet.zbeos.com:9876
 ```
 
-## BNET LIST
-
-```
-bnet-connect = kylin.fnbnet.eosbixin.com:3389
-bnet-connect = kylin.meet.one:4321
-```
-
 ## HTTP API LIST
 
 API nodes:
 ```
 http://39.108.231.157:30065/v1/chain/get_info
 https://api.kylin-testnet.eospacex.com/v1/chain/get_info
-http://kylin.fn.eosbixin.com/v1/chain/get_info
 http://api.kylin.eoseco.com/v1/chain/get_info
 http://178.62.36.41:8888/v1/chain/get_info
 https://api.kylin.alohaeos.com/v1/chain/get_info
@@ -122,21 +113,21 @@ https://api-kylin.eosasia.one/v1/chain/get_info
 Creating accounts on cryptokylin is pretty simple:
 
 #### Free Account
-Create account using: http://faucet.cryptokylin.io/create/new_account_name
+Create account using: http://faucet-kylin.blockzone.net/create/new_account_name
 
 Example:
 ```
-curl http://faucet.cryptokylin.io/create/111111111ooo
+curl http://faucet-kylin.blockzone.net/create/111111111ooo
 ```
 
 
 #### Get Free tokens
-Get free token with: http://faucet.cryptokylin.io/get_token/your_account_name.
+Get free token with: http://faucet-kylin.blockzone.net/get_token/your_account_name.
 You can get 100 tokens each call and max 1000 tokens per day.  
 
 Example:
 ``` 
-curl http://faucet.cryptokylin.io/get_token/111111111ooo
+curl http://faucet-kylin.blockzone.net/get_token/111111111ooo
 ```
 
 ## Backup files (Not in maintenance)
